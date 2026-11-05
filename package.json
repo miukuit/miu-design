@@ -1,0 +1,45 @@
+{
+  "name": "miu-design",
+  "version": "0.0.1",
+  "private": true,
+  "description": "miukuit 系统设计规范及使用文档",
+  "author": "miukuit",
+  "type": "module",
+  "scripts": {
+    "dev:docs": "pnpm -F docs dev",
+    "build:docs": "pnpm -F docs build",
+    "dev": "pnpm -r run --parallel --filter \"./*\" dev",
+    "build": "pnpm -r build",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "lint-staged": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "simple-git-hooks": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "node scripts/check-commit-msg.mjs $1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,vue,js,mjs}": [
+      "oxlint --fix",
+      "oxfmt"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "oxfmt"
+    ],
+    "*.{scss,css}": [
+      "oxfmt"
+    ]
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=12"
+  }
+}

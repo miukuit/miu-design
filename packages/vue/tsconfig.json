@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+    "jsx": "preserve",
+    "paths": {
+      "@miu-design/shared": ["../shared/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}
