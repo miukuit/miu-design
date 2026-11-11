@@ -1,7 +1,8 @@
-import type { BaseOption } from '@miu-design/shared'
+import type { SelectOption } from '@miu-design/shared'
+
 /** 应用主题选项 */
 export type AppTheme = 'light' | 'dark'
-export const themeOptions: readonly BaseOption<AppTheme>[] = [
-  { label: 'app.theme.light', value: 'light' },
-  { label: 'app.theme.dark', value: 'dark' },
+export const themeOptions: readonly SelectOption<AppTheme>[] = [
+  { label: 'theme.light', value: 'light' },
+  { label: 'theme.dark', value: 'dark' },
 ]

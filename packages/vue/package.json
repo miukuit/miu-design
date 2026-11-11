@@ -15,16 +15,16 @@
   "scripts": {
     "build": "tsdown"
   },
+  "dependencies": {
+    "@miu-design/shared": "workspace:*",
+    "axios": "catalog:",
+    "vue": "catalog:"
+  },
   "devDependencies": {
     "@types/node": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "unplugin-vue": "catalog:",
     "vue-tsc": "catalog:"
-  },
-  "peerDependencies": {
-    "@miu-design/shared": "workspace:*",
-    "axios": "catalog:",
-    "vue": "catalog:"
   }
 }

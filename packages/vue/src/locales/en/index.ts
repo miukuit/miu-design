@@ -1,8 +1,18 @@
 import type { LocaleMessages } from '../messages'
-import app from './app'
 
 export const en: LocaleMessages = {
-  app,
+  app: {
+    locale: {
+      title: 'Language',
+      zh: '简体中文',
+      en: 'English',
+    },
+    theme: {
+      title: 'Theme',
+      light: 'Light',
+      dark: 'Dark',
+    },
+  },
 }
 
 export default en
